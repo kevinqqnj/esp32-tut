@@ -6,7 +6,8 @@ from random import randint
 led = Pin(2, Pin.OUT) 
 switch = Pin(23, Pin.OUT) 
 
-p1 = Pin(25, Pin.OUT)   # A create LED object from pin2,Set Pin2 to output
+# define 8 GPIO pins to control 7-Segment Display
+p1 = Pin(25, Pin.OUT)   # A 
 p2 = Pin(4, Pin.OUT)    # B
 p3 = Pin(5, Pin.OUT)    # C
 p4 = Pin(18, Pin.OUT)  # D
@@ -15,7 +16,6 @@ p6 = Pin(13, Pin.OUT)  # F
 p7 = Pin(12, Pin.OUT)  # G
 p8 = Pin(27, Pin.OUT)  # H
 pins = [p1, p2, p3, p4, p5, p6, p7, p8] # LSB <-
-# pins = [p32, p12, p13, p19, p18, p5, p4, p2]
 
 def get_bit_val(byte, index):
     """
@@ -46,7 +46,7 @@ def get_bit_val(byte, index):
 
 digitals = {
     '0': 0x3f, # 0b00111111 LSB: HGFEDCBA
-    '1': 0x6,  # 0x06 will be string during bit shifting
+    '1': 0x6,  # 0x06 will be string during bit shifting, so use 0x6
     '2': 0x5b,
     '3': 0x4f,
     '4': 0x66,
@@ -75,20 +75,20 @@ def blink1():
 
 def main():
     try:
-        print(time.localtime(), '='*10, "Start ...")
+        print('='*20, "Start ...")
         led.off()
         switch.value(1) # other LED off (1)
         setp(digitals['blank'])
         blink1()
 
-        num_string = input('Pls input numbers (e.g.345): ')
+        num_string = input('Pls input numbers (e.g.345.01): ')
         for num in num_string:
             setp(digitals[num])
             print(f'{num}: 0b{digitals[num]:08b}')
             time.sleep(1)
-        print(time.localtime(), '='*10, 'done!')
+        print('='*20, 'done.')
     except KeyboardInterrupt:
-        print(time.localtime(), '='*10, 'manual interupted!')
+        print('='*20, 'manual interrupted!')
     setp(digitals['blank'])
 
 if __name__ == '__main__':
