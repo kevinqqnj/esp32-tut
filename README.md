@@ -1,9 +1,9 @@
-# ESP32 S2
+# ESP32 WROOM
 
 ESP32 is a feature-rich MCU (microcontroller unit) with integrated Wi-Fi and Bluetooth connectivity for a wide-range of applications.
 S2 is supported by micropython for fast POC development.
 
-HW: ESP32 S2
+HW: ESP32 WROOM
 FW: MicroPython v1.18
 
 
