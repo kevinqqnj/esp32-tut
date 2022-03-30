@@ -160,10 +160,10 @@ try:
         if ble_msg:
             print(f'[In{len(ble_msg)}] {ble_msg}')
             if ble_msg == 'read_LED':
-                msg = '[Out] ' + 'LED is ON.' if led.value() else 'LED is OFF.'
+                msg = 'LED is ON.' if led.value() else 'LED is OFF.'
             elif ble_msg == 'LED_off':
                 led.value(0)
-                msg = '[Out] LED turns off.'
+                msg = 'LED turns off.'
             else:
                 msg = usage_msg
             print('[Out] '+msg)
