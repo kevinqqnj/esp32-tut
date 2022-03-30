@@ -23,3 +23,13 @@ Ref: https://docs.sunfounder.com/projects/thales-kit/en/latest/led_segment_displ
 - use 3 GPIO (clock, latch, data), capable of output 8bits (Q0~Q7) in parallel
 diagram：
 https://microcontrollerslab.com/esp32-74hc595-4-digit-7-segment-display/
+
+## BLE_NUS.py
+ESP32 act as Bluetooth LE BLE NUS app. Receive / Send data to BLE Client (phone or PC)
+
+### ESP32 BLE HID, ref to: https://www.bilibili.com/read/cv15067064
+ESP32 act as mouse, keyboard
+
+## AndroidMotorControlBLE.7z 
+This is Android 5 app to interact with ESP32 BLE
+
