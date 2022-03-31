@@ -25,11 +25,12 @@ diagram：
 https://microcontrollerslab.com/esp32-74hc595-4-digit-7-segment-display/
 
 ## BLE_NUS.py
-ESP32 act as Bluetooth LE BLE NUS app. Receive / Send data to BLE Client (phone or PC)
+ESP32 act as Bluetooth Low Energy NUS (Nordic UART Service) app. Receive / Send data to BLE Client (phone or PC)
 
 ### ESP32 BLE HID
 ESP32 act as mouse, keyboard. ref to: https://www.bilibili.com/read/cv15067064
 
 ## AndroidMotorControlBLE.7z 
-This is Android 5 app to interact with ESP32 BLE
+This is Android app to interact with ESP32 BLE
+API26 (Oreo)
 
